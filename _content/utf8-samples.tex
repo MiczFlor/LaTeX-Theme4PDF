@@ -1,0 +1,24 @@
+\chapter{UTF-8 encoded sample}
+% text samples from Wikipedia article on UTF-8
+% https://en.wikibooks.org/wiki/LaTeX/Special_Characters
+
+\section{German}
+äöüßÄÖÜ Bei der UTF-8-Kodierung wird jedem Unicode-Zeichen eine speziell kodierte Zeichenkette variabler Länge zugeordnet. Dabei unterstützt UTF-8 Zeichenketten bis zu einer Länge von vier Byte, auf die sich – wie bei allen UTF-Formaten – alle Unicode-Zeichen abbilden lassen.
+
+\section{Danish}
+UTF-8 er en ægte udvidelse af ASCII standarden, hvilket betyder at en ASCII tekst ikke skal konverteres men også er en UTF-8 tekst.
+
+\section{French}
+UTF-8 (abréviation de l’anglais Universal Character Set Transformation Format - 8 bits) est un codage de caractères informatiques conçu pour coder l’ensemble des caractères du « répertoire universel de caractères codés », initialement développé par l’ISO dans la norme internationale ISO/CEI 10646, aujourd’hui totalement compatible avec le standard Unicode, en restant compatible avec la norme ASCII limitée à l’anglais de base (et quelques autres langues beaucoup moins fréquentes), mais très largement répandue depuis des décennies.
+
+\section{Swedish}
+UTF-8 (åtta-bitars Unicode transformationsformat) är en längdvarierande teckenkodning som används för att representera text kodad i Unicode, som en sekvens av byte (oktetter). Unicode använder upp till 21 bitar per tecken, vilket inte får plats i en byte, och därför används till exempel i textfiler vanligen en av metoderna UTF-8 eller UTF-16 för att få en serie bytes.
+
+\section{Turkish}
+UTF-8 8-bitlik bir Unicode dönüşüm biçimidir (İng: Unicode Transformation Format 'ın kısaltması). Unicode karakterlerini değişken sayıda 8 bitten oluşan bayt (kod birimi) gruplarıyla kodlamakta kullanılır. Rob Pike ve Ken Thompson tarafından geliştirilmiştir. UTF-8 kodlaması Unicode karakterlerini 1-6 bayt uzunluğunda diziler olarak kodlar. ASCII kodlaması içinde 0-127 arasında kalan karakterler, Unicode standardında aynı kod noktalarıyla ifade edildiğinden aynen kendi kodları ile kullanılır, diğerleri ise bayt dizileri haline gelir.
+
+\section{Spanish}
+Errores de codificación: Las normas de codificación establecen, por lo tanto, límites a las cadenas que se pueden formar. Según la norma, un intérprete de cadenas debe rechazar como inválidos, y no tratar de interpretar, las caracteres mal formados. Un intérprete de cadenas UTF-8 puede cancelar el proceso señalando un error, omitir los caracteres mal formados o reemplazarlos por un carácter U+FFFD (REPLACEMENT CHARACTER).
+
+\section{Polish}
+Przykład: Kodowanie na podstawie znaku euro €: Znak € w Unicode ma oznaczenie U+20AC. Zgodnie z informacjami w poprzednim podrozdziale taka wartość jest możliwa do zakodowania na 3 bajtach. Liczba szesnastkowa 20AC to binarnie 0010 0000 1010 1100 po uzupełnieniu wiodącymi zerami do 16 bitów, ponieważ tyle bitów trzeba zakodować na 3 bajtach w UTF-8.    Kodowanie na trzech bajtach wymaga użycia w pierwszym bajcie trzech wiodących bitów ustawionych na 1, a czwartego na 0 (1110…). Pozostałe bity pierwszego bajtu pochodzą z najstarszych czterech bitów kodowanej wartości w Unicode, co daje (1110 0010), a reszta bitów dzielona jest na dwa bloki po 6 bitów każdy (…0000 1010 1100). Do tych bloków dodawane są wiodące bity 10, by tworzyły następujące 8-bitowe wartości 1000 0010 i 1010 1100). W ten sposób rezultatem są trzy bajty w postaci 1110 0010 1000 0010 1010 1100, co w systemie szesnastkowych przyjmuje postać E2 82 AC.
