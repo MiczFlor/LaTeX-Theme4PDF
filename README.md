@@ -4,9 +4,14 @@ This set of LaTeX book templates is aimed at making automated PDFs easier. All v
 ## What is this repository for? ##
 
 * This set of scripts is meant to make the creation of a print PDF easy, using LaTeX without having to write LaTeX.
-* This is like a template abstraction for LaTeX, allowing the content to come from Booktype and LaTeX improvements to be done without touching the Booktype code.
+* This is like a template abstraction for LaTeX, seperating business logic and presentation logis. All content comes from the outside, all the PDF design from these files.
 * The set of .tex files is structured to read one config file (also .tex) and then adjust metadata, design and front matter, table of contents, etc. accordingly.
-* Booktype creates this config file from the metadata it has. No other files (well, only the content itself ;) need to be created.
+
+## How to use this? ##
+
+* Take a look at the existing metadata file **BookConfig/variables.tex**. Create this file from your application.
+* Inside folder **_content/** the three files AAfrontmatter.tex, AAmainmatter.tex, AAbackmatter.tex are the content in LaTex (for details on e.g. themes and images see below).
+* run 'pdflatex book_master.tex' to create a PDF.
 
 ## What do the files and folders mean? ##
 * **book_master.tex** This is the main file, like the index.html for the book. In the spirit of this project, you should NOT edit this document. Content and formatting are elsewhere to be added.
