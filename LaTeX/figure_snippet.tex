@@ -21,14 +21,15 @@
 }
 \fi
 
-\hrule% to see \linewidth
+% to see \linewidth
+% \hrule
 
-\begin{figure}
-\includegraphics[max width=\linewidth]{example-image-1x1}
-\end{figure}
-\begin{figure}
-\includegraphics[max width=\linewidth]{example-image-a4}
-\end{figure}
+%\begin{figure}
+%\includegraphics[max width=\linewidth]{example-image-1x1}
+%\end{figure}
+%\begin{figure}
+%\includegraphics[max width=\linewidth]{example-image-a4}
+%\end{figure}
 
 
 \ifnum\pdfstrcmp{\varWrapText}{true}=0 
@@ -45,14 +46,23 @@
 	\centering
 	\ifnum\pdfstrcmp{\varFigWidth}{paper}=0 
 		% image is paperwidth
-		\includegraphics[width=\paperwidth]{\varImgPath}
+		% max height a little less than text height to incluce caption
+		\includegraphics[width=\paperwidth, max height=0.95\textheight]{\varImgPath}
 	\else
 		\ifnum\pdfstrcmp{\varFigWidth}{text}=0 
 			% image is text width
-			\includegraphics[width=\textwidth]{\varImgPath}			
+			% max height a little less than text height to incluce caption
+			\includegraphics[width=\textwidth, max height=0.95\textheight]{\varImgPath}			
 		\else
-			% image is scaled
-			\includegraphics[width=\varFigWidth\textwidth]{\varImgPath}
+			\ifnum\pdfstrcmp{\varFigWidth}{scale}=0 
+				% image is as big as possible, max width = text width
+				% max height a little less than text height to incluce caption
+				\includegraphics[max width=\textwidth, max height=0.95\textheight]{\varImgPath}			
+			\else
+				% image is scaled according to parameter given in \varFigWidth
+				% max height a little less than text height to incluce caption
+				\includegraphics[max width=\varFigWidth\textwidth, max height=0.95\textheight]{\varImgPath}
+			\fi 
 		\fi 
 	\fi 
 	% if caption empty, don't print it (no empty line)
